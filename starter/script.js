@@ -1,5 +1,4 @@
 'use strict';
-/*
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // BANKIST APP
@@ -61,6 +60,7 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
+/*
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -152,7 +152,6 @@ movements.forEach(function (mov, i, arr) {
 // 1: function(450)
 // 2: function(400)
 // ...
-*/
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // forEach with Maps and Sets
@@ -174,3 +173,4 @@ console.log(currenciesUnique);
 currenciesUnique.forEach(function (value, _, map) {
   console.log(`${value}: ${value}`);
 });
+*/
