@@ -239,36 +239,39 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 // LECTURES
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Sorting Arrays
+// More Ways of Creating and Filling Arrays
 
-// Strings
-const owners = ['Jonas', 'Zach', 'Adam', 'Martha'];
-console.log(owners.sort());
-console.log(owners);
+const arr = [1, 2, 3, 4, 5, 6, 7];
+console.log(new Array(1, 2, 3, 4, 5, 6, 7));
 
-// Numbers
-console.log(movements);
+// Empty arrays + fill method
+const x = new Array(7);
+console.log(x);
+// console.log(x.map(() => 5)
+x.fill(1);
+x.fill(1, 3, 5);
+console.log(x);
 
-// return < 0, A, B (keep order)
-// return > 0, B, A (switch order)
+arr.fill(23, 2, 6);
+console.log(arr);
 
-// Ascending
-// movements.sort((a, b) => {
-//   if (a > b) return 1;
-//   if (b > a) return -1;
-// });
-movements.sort((a, b) => a - b);
+// Array.from
+const y = Array.from({ length: 7 }, () => 1);
+console.log(y);
 
-console.log(movements);
+const z = Array.from({ length: 7 }, (cur, i) => i + 1);
+console.log(z);
 
-// Descending
-// movements.sort((a, b) => {
-//   if (a > b) return -1;
-//   if (a < b) return 1;
-// });
-movements.sort((a, b) => b - a);
+labelBalance.addEventListener('click', function () {
+  const movementsUI = Array.from(
+    document.querySelectorAll('.movements_value'),
+    el => Number(el.textContent.replace('€', ''))
+  );
 
-console.log(movements);
+  console.log(movementsUI);
+
+  const movementsUI2 = [...document.querySelectorAll('.movements_value')];
+});
 
 /*
 
@@ -507,6 +510,39 @@ const overallBalance2 = accounts
   .flatMap(acc => acc.movements)
   .reduce((acc, mov) => acc + mov, 0);
 console.log(overallBalance2);
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Sorting Arrays
+
+// Strings
+const owners = ['Jonas', 'Zach', 'Adam', 'Martha'];
+console.log(owners.sort());
+console.log(owners);
+
+// Numbers
+console.log(movements);
+
+// return < 0, A, B (keep order)
+// return > 0, B, A (switch order)
+
+// Ascending
+// movements.sort((a, b) => {
+//   if (a > b) return 1;
+//   if (b > a) return -1;
+// });
+movements.sort((a, b) => a - b);
+
+console.log(movements);
+
+// Descending
+// movements.sort((a, b) => {
+//   if (a > b) return -1;
+//   if (a < b) return 1;
+// });
+movements.sort((a, b) => b - a);
+
+console.log(movements);
 
 
 
